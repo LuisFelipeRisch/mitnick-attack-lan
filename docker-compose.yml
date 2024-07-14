@@ -24,6 +24,7 @@ services:
                 ipv4_address: 10.9.0.5
 
         command: bash -c "
+                      echo '10.9.0.6' > /root/.rhosts &&
                       /etc/init.d/openbsd-inetd start  &&
                       tail -f /dev/null
                  "
