@@ -13,7 +13,7 @@ Antes de rodar o docker compose, certifique-se que o seguinte comando
 echo '10.9.0.6' > /root/.rhosts
 ```
 
-esteja presente na chave `command` do serviço `x-terminal`. Este comando é necessário para dar acesso remoto, sem autenticação, ao `trusted-server` na `x-terminal`. Isso é um dos princípios do ataque mitnick, uma máquina confiável (A) pode acessar outra máquina (B), sem nenhuma autenticação, pois o ip da máquina A se encontra no arquivo `.rhosts` da máquina B. 
+esteja presente na chave `command` do serviço `x-terminal` no arquivo `docker-compose.yml`. Este comando é necessário para dar acesso remoto, sem autenticação, ao `trusted-server` na `x-terminal`. Isso é um dos princípios do ataque mitnick, uma máquina confiável (A) pode acessar outra máquina (B), sem nenhuma autenticação, pois o ip da máquina A se encontra no arquivo `.rhosts` da máquina B. 
 
 Tendo o docker instalado, na raíz do projeto rode o seguinte comando: 
 ```bash
