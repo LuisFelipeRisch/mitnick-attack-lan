@@ -20,8 +20,7 @@ Tendo o docker instalado, na raíz do projeto rode o seguinte comando:
 sudo docker compose up
 ```
 
-Agora, abra três terminais distintos e, em cada um destes, execute uma das três linhas de comando a seguir:
-
+Agora, abra três terminais distintos e, em cada um destes, execute uma das três linhas de comando abaixo separadamente:
 ```bash
 sudo docker exec -it seed-attacker bash           # acessa a máquina atacante
 sudo docker exec -it x-terminal-10.9.0.5 bash     # acessa a máquina x-terminal
