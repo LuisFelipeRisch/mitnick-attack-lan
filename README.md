@@ -22,11 +22,14 @@ sudo docker compose up
 
 Agora, abra três terminais distintos e, em cada um destes, execute uma das três linhas de comando abaixo separadamente:
 ```bash
-sudo docker exec -it seed-attacker bash           # acessa a máquina atacante
-sudo docker exec -it x-terminal-10.9.0.5 bash     # acessa a máquina x-terminal
+sudo docker exec -it seed-attacker bash # acessa a máquina atacante
+```
+```bash
+sudo docker exec -it x-terminal-10.9.0.5 bash # acessa a máquina
+```
+```bash
 sudo docker exec -it trusted-server-10.9.0.6 bash # acessa a máquina trusted-server
 ```
-
 Por fim, na máquina `x-terminal` certifique-se que o ip da máquina `trusted-server` se encontra no arquivo `.rhosts`. Rode o seguinte comando: 
 
 ```bash
