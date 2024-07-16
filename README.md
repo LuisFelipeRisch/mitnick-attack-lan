@@ -25,7 +25,7 @@ Agora, abra três terminais distintos e, em cada um destes, execute uma das trê
 sudo docker exec -it seed-attacker bash # acessa a máquina atacante
 ```
 ```bash
-sudo docker exec -it x-terminal-10.9.0.5 bash # acessa a máquina
+sudo docker exec -it x-terminal-10.9.0.5 bash # acessa a máquina x-terminal
 ```
 ```bash
 sudo docker exec -it trusted-server-10.9.0.6 bash # acessa a máquina trusted-server
